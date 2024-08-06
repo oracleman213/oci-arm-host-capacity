@@ -41,7 +41,8 @@ $bootVolumeSizeInGBs = (string) getenv('OCI_BOOT_VOLUME_SIZE_IN_GBS');
 $bootVolumeId = (string) getenv('OCI_BOOT_VOLUME_ID');
 if ($bootVolumeSizeInGBs) {
     $config->setBootVolumeSizeInGBs($bootVolumeSizeInGBs);
-} elseif ($bootVolumeId) {
+} 
+if ($bootVolumeId) {
     $config->setBootVolumeId($bootVolumeId);
 }
 
